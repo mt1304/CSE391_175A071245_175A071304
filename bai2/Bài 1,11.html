@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tạo Form và các tiêu đề trên Form</title>
+</head>
+<body>
+	<h1 align="center"> Đăng Nhập </h1>
+	<form id="dangnhap" >
+		<table align="center" border="1" cellpadding="1" cellspacing="1" style="border-collapse: collapse; background-color: #91f5e7;">
+			<tr>
+				<td>
+		<label>Mã Người Dùng:</label> </td> 
+				<td>
+    	<input type="text" id="tk" ><br> </td> 
+    		</tr>
+				
+			<tr>
+				<td>
+		<label>Mật khẩu:</label> </td>
+				<td>
+    	<input type="password" ><br> </td>
+    		</tr>
+			<tr>
+				<td colspan="2" align="center">
+		 <input type="button" name="dongy" value="Đồng ý" onclick="myfunction()"/>
+				</td> </tr>
+			<tr>
+				<td colspan="2" align="center" id="user">
+					<script>
+                    function myfunction(){
+                        document.getElementById('user').innerHTML = document.getElementById('tk').value;
+                    }
+                </script>					
+		</table>
+		
+	</form>	
+</body>
+</html> 

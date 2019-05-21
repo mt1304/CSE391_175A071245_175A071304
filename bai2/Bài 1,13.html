@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tạo Form và các tiêu đề trên Form</title>
+</head>
+
+<body>
+    <h2 align="center" style="color: #00DBFB">Phiếu đăng kí tham gia chương trình khuyến mãi</h2>
+    <form action="" id="regis">
+        <table align="center" border="1"; style="border-collapse: collapse; background-color: #F5DFA3; color: #00DBFB " >
+            <tr>
+                <td>Họ và tên</td>
+                <td><input id="name" type="text-box"></td>
+            </tr>
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input id="addresss" type="text"></td>
+            </tr>
+            <tr>
+                <td>Điện thoại</td>
+                <td><input id="telephone" type="text"></td>
+            </tr>
+            <tr>
+                <td>Khách Việt Nam</td>
+                <td>
+                    <input type="checkbox" name='customer' value="vietnamese">
+                </td>
+            </tr>
+            <tr>
+                <td>Chọn tuor </td>
+                <td>
+                    <select name="tour" id="tour">
+                        <optgroup label="Miền Bắc">
+                            <option value="">Hà Nội - Hạ Long - Sapa</option>
+                            <option value="">Hà Nội - Chùa Hương - Ninh Bình</option>
+                            <option value="">Hà Nội - Cát Bà - Tuần Châu</option>
+                        </optgroup>
+                        <optgroup label="Miền Trung">
+                            <option value="">Huế - Bạch Mã - Đà Nẵng</option>
+                            <option value="">Nha Trang - Đà Lạt</option>
+                            <option value="">Buôn mê thuột - Gia Lai - Kontum</option>
+                        </optgroup>
+                    <optgroup>
+                        <option value=""></option>
+                    </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Phương Tiện</td>
+                <td>
+                <input type="radio" name="vehicle" value="Máy Bay"> Máy Bay
+                <input type="radio" name="vehicle" value="Xe ô tô"> Xe Ô Tô
+
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                    <legend>Số lượng đoàn khách</legend>
+                    Người lớn: <input type="text"  />
+                    Trẻ em: <input type="text" />
+                    
+                    </fieldset>
+
+            <tr>
+                <td>Ghi chú thêm</td>
+                <td>
+                    <textarea rows="5" cols="20"> </textarea> </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" value="Đồng ý" onclick="myfunction()">
+                    
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" id="success"></td>
+                <script>
+                        function myfunction() {
+                            document.getElementById("regis").innerText = "Bạn đã đăng ký thành công";
+
+                        }
+                    </script>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>
