@@ -82,3 +82,17 @@ hr {
 	height: 5px;
 	margin: 0px 
 }
+#carouselExampleIndicators{
+left: 165px;
+right: 165px;
+height: 461px;
+width: 1194.810px;
+
+}
+
+.navbar{
+z-index: 2
+}
+.body{
+z-index: 1
+}
