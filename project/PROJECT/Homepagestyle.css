@@ -2,7 +2,7 @@ body{
 	overflow-x: hidden;
 }
 #header{
-	height: 133px
+	height: 133px;
 }
 .top-head {
 	display: flex;
