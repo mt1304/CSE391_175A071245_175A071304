@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Login</title>
+	<link rel="stylesheet" href="">
+</head>
+<style>
+	body{
+		background-color: rgb(49, 52, 64)
+	}
+	p {
+		height: 100%;
+		font-family: ;
+		color: gray;
+		font-size: 20px;
+		margin-left: 90px
+	}
+	h1{
+		color:#1CA1D2;
+		text-align: center
+	}
+	.submit{
+		outline: none !important;
+		font-family: ;
+		border: 1px;
+		border-radius: 15px;
+		width: 150px;
+		height: 40px;
+		font-size: 20px;
+		background: rgb(149, 228, 235);
+		color: #fff;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 10px
+	}
+	.submit:hover{
+		cursor: pointer;
+		background-color: #28C8FC;
+	}
+	.username , .password{
+		border: 1px;
+		border-style:  solid;
+		border-color: #000000;
+		border-radius: 2px;
+		width: 200px;
+		height: 35px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.logform{
+		margin: auto;
+		width: 380px;
+		height: 420px;
+		background-color: #FFFFFF;
+		border-radius: 5px;
+	}
+
+</style>
+<body>
+	<div class="logform">
+		<h1>Đăng Nhập</h1>
+<form name="login" onsubmit="return validateForm() ;" method="post">
+
+<p>Tên đăng nhập:</p><input class="username" type="text"  placeholder="" name="username"> <br>
+<p>Mật khẩu:</p><input class="password" type="password" placeholder="" name="password"><br>
+
+<input type="button" class="submit" value="Đăng Nhập" name="submit" onclick="validate()">
+</form>
+</div>
+
+<script>
+function validate()
+{
+	var un = document.login.username.value;
+	var pw = document.login.password.value;
+	var valid = false;
+	var usernameArray = ["175A071304", "175A071245"];<!-- Tạo chuỗi tên đăng nhập -->;
+	var passwordArray = ["123456", "654321"];<!-- Tạo chuỗi mật khẩu -->;
+	for (var i = 0; i < usernameArray.length; i++) <!-- Vòng lặp -->;
+ {
+	if ((un == usernameArray[i]) && (pw == passwordArray[i]))<!-- điều kiện : tên và mật khẩu phải giống để có thể đn -->
+	{
+		valid = true;
+		break;
+	}
+}
+	if (valid) 
+	{
+		alert("Đăng nhập thành công!");
+		window.location = "lumino/index.html";
+		return false;
+	}
+	else{
+		alert("Sai tên đăng nhập hoặc mật khẩu! Mời nhập lại.")
+	}
+}
+</script>
+
+</body>
+</html>
